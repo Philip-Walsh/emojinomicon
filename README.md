@@ -18,8 +18,8 @@
 1. **Using an Emoji as a Background**
    ```css
    .emoji-background {
-       background-image: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/src/grinning-face.svg");
-       background-size: cover; /* Adjust size to fit your needs */
+	    background: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/main/src/robot.svg"), linear-gradient(135deg, #0f2027, #203a43);
+	    background-size: 30px 30px, cover;
        height: 100vh; /* Full viewport height */
        width: 100vw; /* Full viewport width */
    }
