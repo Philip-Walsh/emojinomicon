@@ -137,7 +137,6 @@ The repository includes an automated workflow to generate SVGs with accessibilit
 #### 🤝 **Related Projects**
 
 - **[WordsIK](https://github.com/Philip-Walsh/wordsIK)**: A collaborative repository for educational vocabulary and language learning resources
-- **[Terminal Emoji](https://github.com/Philip-Walsh/terminal-emoji)**: A terminal-based emoji picker and manager
 
 ---
 
