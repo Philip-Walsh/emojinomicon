@@ -67,10 +67,21 @@ class EmojiSVGGenerator:
         title = name
         description = desc or name
         svg_content = f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" 
+     role="img" 
+     aria-labelledby="title desc"
+     aria-label="{title}"
+     aria-description="{description}"
+     aria-hidden="false"
+     focusable="true">
   <title id="title">{title}</title>
   <desc id="desc">{description}</desc>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="48" font-family="'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif">
+  <text x="50%" y="50%" 
+        dominant-baseline="middle" 
+        text-anchor="middle" 
+        font-size="48" 
+        font-family="'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif"
+        aria-hidden="true">
     {emoji_char}
   </text>
 </svg>'''

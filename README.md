@@ -10,6 +10,8 @@
   - **Cursors**
   - **Icons**
   - **Decorative Elements**
+  - **Skin Tone Variants**
+  - **Family Combinations**
 
 ---
 
@@ -18,8 +20,8 @@
 1. **Using an Emoji as a Background**
    ```css
    .emoji-background {
-	    background: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/main/src/robot.svg"), linear-gradient(135deg, #0f2027, #203a43);
-	    background-size: 30px 30px, cover;
+       background: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/main/output/robot.svg"), linear-gradient(135deg, #0f2027, #203a43);
+       background-size: 30px 30px, cover;
        height: 100vh; /* Full viewport height */
        width: 100vw; /* Full viewport width */
    }
@@ -28,14 +30,14 @@
 2. **Using an Emoji as a Cursor**
    ```css
    .emoji-cursor {
-       cursor: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/src/grinning-face.svg"), auto;
+       cursor: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/grinning-face.svg"), auto;
    }
    ```
 
 3. **Adding an Emoji Icon to Buttons**
    ```css
    .emoji-button {
-       background: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/src/thumbs-up.svg") no-repeat;
+       background: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/thumbs-up.svg") no-repeat;
        padding-left: 30px; /* Space for emoji */
        height: 50px; /* Height of the button */
        border: none;
@@ -46,10 +48,35 @@
 4. **Decorating a Header with Emojis**
    ```css
    .emoji-header {
-       background-image: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/src/sparkles.svg");
+       background-image: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/sparkles.svg");
        background-size: 50px; /* Adjust size */
        padding: 20px;
        text-align: center;
+   }
+   ```
+
+5. **Using Skin Tone Variants**
+   ```css
+   /* Light skin tone */
+   .light-skin {
+       background-image: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/thumbs-up:_light_skin_tone.svg");
+   }
+   
+   /* Dark skin tone */
+   .dark-skin {
+       background-image: url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/thumbs-up:_dark_skin_tone.svg");
+   }
+   ```
+
+6. **Creating a Wallpaper Pattern**
+   ```css
+   .emoji-wallpaper {
+       background-image: 
+           url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/sparkles.svg"),
+           url("https://raw.githubusercontent.com/Philip-Walsh/emojinomicon/output/star.svg");
+       background-size: 50px 50px, 30px 30px;
+       background-position: 0 0, 25px 25px;
+       background-repeat: repeat;
    }
    ```
 
@@ -66,6 +93,11 @@
 2. **Integrate the Emojis in Your CSS**
    Copy the URL of your desired emoji from the repository and use the examples above to incorporate them into your styles.
 
+3. **Using in Your Projects**
+   - Direct URL: Use the raw GitHub URLs in your CSS/HTML
+   - Local Copy: Download specific SVGs for offline use
+   - CDN: Use as a lightweight alternative to emoji libraries
+
 ---
 
 #### 🔄 **Automated SVG Generation**
@@ -78,7 +110,7 @@ The repository includes an automated workflow to generate SVGs with accessibilit
    pip install -e .
    
    # Generate SVGs
-   python -m emojinomicon --emoji-data emoji.json --output-dir output
+   python -m emojinomicon.cli --emoji-data emoji.json --output-dir output
    ```
 
 2. **Automated Generation via GitHub Actions**
@@ -99,6 +131,13 @@ The repository includes an automated workflow to generate SVGs with accessibilit
    - Changes are made to `emoji.json`, `src/` directory, or the workflow file
    - The commit message contains `[generate-svgs]`
    - The changes are pushed to the master branch
+
+---
+
+#### 🤝 **Related Projects**
+
+- **[WordsIK](https://github.com/Philip-Walsh/wordsIK)**: A collaborative repository for educational vocabulary and language learning resources
+- **[Terminal Emoji](https://github.com/Philip-Walsh/terminal-emoji)**: A terminal-based emoji picker and manager
 
 ---
 
