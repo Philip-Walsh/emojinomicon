@@ -62,8 +62,7 @@ Pipfile.lock
 # VS Code
 .vscode/
 
-# Output
-output/
+src/*.svg
 
 # System
 .DS_Store
